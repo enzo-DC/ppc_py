@@ -29,9 +29,9 @@ def main():
         utils.print_results(choice, ia, result, (player_wins, ia_wins, ties), assets.ICONS)
 
     
-    print("=== Score final ===")
-    print(f"Toi: {player_wins} | IA: {ia_wins} | Nuls: {ties}")
-    print(f"Le Vainqueur est : {'Toi beau gosse 🔥💪 👑' if player_wins > ia_wins else 'L\'IA salle merde 💩 ☠' if ia_wins > player_wins else 'Aucun, c\'est une égalité 👀'}")
+    utils.print_slow("=== Score final ===", 0.01)
+    utils.print_slow(f"Toi: {player_wins} | IA: {ia_wins} | Nuls: {ties}")
+    utils.print_slow(f"Le Vainqueur est : {'Toi beau gosse 🔥💪 👑' if player_wins > ia_wins else 'L\'IA salle merde 💩 ☠' if ia_wins > player_wins else 'Aucun, c\'est une égalité 👀'}")
 
 
 if __name__ == "__main__":
