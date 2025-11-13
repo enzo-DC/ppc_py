@@ -25,9 +25,9 @@ def get_player_choice(valid_inputs: Dict[str, str]) -> str:
         return choice
 
 
-def print_results(player: str, cpu: str, result: int, score: Tuple[int, int, int], icons: Dict[str, str]) -> None:
+def print_results(player: str, ia: str, result: int, score: Tuple[int, int, int], icons: Dict[str, str]) -> None:
     p_icon = icons.get(player, "?")
-    c_icon = icons.get(cpu, "?")
+    c_icon = icons.get(ia, "?")
 
     if result == 1:
         msg = "Tu gagnes !"
@@ -36,9 +36,9 @@ def print_results(player: str, cpu: str, result: int, score: Tuple[int, int, int
     else:
         msg = "Égalité."
 
-    result_line = f"Tu: {player} {p_icon}  |  CPU: {cpu} {c_icon} -> {msg}"
+    result_line = f"Toi: {player} {p_icon}  |  IA: {ia} {c_icon} -> {msg}"
     print_slow(result_line, delay=0.01)
-    print(f"Score — Toi: {score[0]} | CPU: {score[1]} | Nuls: {score[2]}\n")
+    print(f"Score — Toi: {score[0]} | ia: {score[1]} | Nuls: {score[2]}\n")
 
 
 def print_slow(text: str, delay: float = 0.02) -> None:
